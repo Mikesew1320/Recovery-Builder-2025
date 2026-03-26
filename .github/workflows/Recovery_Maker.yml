@@ -23,7 +23,7 @@ on:
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/TECNO/CD6'
+        default: 'device/tecno/CD6'
       COMMON_TREE_URL:
         description: 'COMMON_TREE_URL (if no common tree, leave blank)'
         required: false
@@ -42,8 +42,7 @@ on:
         description: 'BUILD_TARGET'
         required: true
         default: 'recovery'
-
-        jobs:
+jobs:
   build:
     if: github.event.repository.owner.id == github.event.sender.id
     runs-on: ubuntu-24.04
