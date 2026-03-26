@@ -146,7 +146,6 @@ on:
         bash ${GITHUB_WORKSPACE}/scripts/convert.sh ${{ github.event.inputs.DEVICE_PATH }}/${{ steps.buildtree.outputs.value }}.dependencies
         repo sync -j$(nproc --all)
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
-      continue-on-error: branch_protection_rule: true
       
     - name: Set Swap Space
       uses: pierotofy/set-swap-space@master
